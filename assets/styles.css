@@ -125,10 +125,12 @@ header .header-info {
     margin-top: 50px;
     display: flex;
     align-items: center;
+    padding-right: 0;
   }
   header .header-info .header-info--subinfo {
     text-align: center;
   }
+
 }
 .hello-label {
   font-size: 30px;
@@ -172,8 +174,24 @@ header .header-info {
   width: 220px;
   box-sizing: border-box;
   margin-left: 20px;
+  transition: all 300ms ease-in-out;
+}
+@media (max-width: 576px) {
+  .header-cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cv-button {
+    margin-bottom: 15px;
+  }
 }
 
+.cv-button:hover {
+  transform: scale(1.08);
+  color: white;
+
+}
 .header-cv .cv-button.cv-pdf {
   background-color: #005cbf;
   border: 3px solid #005cbf;
@@ -185,6 +203,7 @@ header .header-info {
   border-radius: 25px;
   color: #005cbf;
 }
+
 
 
 @media (max-width: 1240px) {
